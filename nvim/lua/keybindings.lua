@@ -3,11 +3,6 @@ local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true}
 ----------------------------------------
 
-----------------------------------------
-vim.g.mapleader = ' '
-vim.g['user_emmet_leader_key'] = ','
-----------------------------------------
-
 --------------------------------------------------------
 keymap('n', '<Leader>w', ':w<CR>', {})
 keymap('n', '<Leader>q', ':q<CR>', {})
@@ -40,11 +35,20 @@ keymap('n', '<Up>', ':resize -2<CR>', opts)
 
 ---TELESCOPE SHORTCUTS-------------------------------------------
 keymap('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
-keymap('n', '<Leader>fg', '<cmd>Telescope live_grep prompt_prefix=<cr>', opts)
+keymap('n', '<Leader>fg', '<cmd>Telescope live_grep prompt_prefix=<cr>', opts)
 keymap('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
 keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opts)
-keymap('n', '<Leader>fs', '<cmd>Telescope git_status<CR>', opts)
+--keymap('n', '<Leader>fs', '<cmd>Telescope git_status<CR>', opts)
 keymap('n', '<Leader>fc', '<cmd>Telescope command_history<CR>', opts)
+
 -------------------------------------------------------------------
 
+--Comments Configuration-------------------------------------------
+keymap('v', '<space>cc', ':Commentary<CR>', opts)
+keymap('n', '<space>cc', ':Commentary<CR>', opts)
+-------------------------------------------------------------------
+
+---Prettier Configuration---------------------------------------------
+keymap('n', '<c-d>', ':CocCommand prettier.formatFile<CR>', opts)
+---------------------------------------------------------------------
 
