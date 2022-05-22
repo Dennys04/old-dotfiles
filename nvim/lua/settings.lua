@@ -35,15 +35,6 @@ vim.g.mapleader = ' '
 vim.g['NERDTreeQuitOnOpen'] = 1
 ------------------------------------------
 
-
------TokyoNight Configuration--------------
-vim.g['colorscheme'] = 'tokyonight'
-vim.g['tokyonight_style'] = "night"
-vim.g['tokyonight_italic_functions'] = true
-vim.g['tokyonight_dark_sidebar'] = true
--------------------------------------------
-
-
 --Airline Configuration-----------------------------------
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensiones#tabline#left_sep'] = ''
