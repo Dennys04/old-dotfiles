@@ -1,6 +1,8 @@
 
 ----SETTINGS-----------------
 vim.o.syntax = "enable"
+vim.opt.backup = false
+vim.opt.swapfile = false
 vim.o.showcmd = true
 vim.o.number = true
 vim.o.mouse = 'a'
@@ -20,7 +22,7 @@ vim.o.sw = 2
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.background = "dark"
-vim.o.guifont = "FiraCode Nerd Font Mono:12"
+vim.o.guifont = "Hack Nerd Font Mono:12"
 --------------------------------
 
 ---Emmet Configuration---------------------------------------------
