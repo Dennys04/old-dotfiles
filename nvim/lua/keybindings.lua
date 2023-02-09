@@ -3,6 +3,9 @@ local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true}
 ----------------------------------------
 
+--Command Mode
+keymap('n', '..', ':', {})
+
 --------------------------------------------------------
 keymap('n', '<Leader>w', ':w<CR>', {})
 keymap('n', '<Leader>q', ':q<CR>', {})
@@ -33,16 +36,11 @@ keymap('n', '<Down>', ':resize +2<CR>', opts)
 keymap('n', '<Up>', ':resize -2<CR>', opts)
 --------------------------------------------------------
 
----TELESCOPE SHORTCUTS-------------------------------------------
-keymap('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
-keymap('n', '<Leader>fg', '<cmd>Telescope live_grep prompt_prefix=<cr>', opts)
-keymap('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
-keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opts)
---keymap('n', '<Leader>fs', '<cmd>Telescope git_status<CR>', opts)
-keymap('n', '<Leader>fc', '<cmd>Telescope command_history<CR>', opts)
+-----------------------------BUFFERS---------------------------------
 
--------------------------------------------------------------------
-
+keymap('n', '<c-Left>', ':bp<CR>', {}) --Go back to previous buffer
+keymap('n', '<c-Right>', ':bn<CR>', {}) --Move to next buffer
+---------------------------------------------------------------------
 --Comments Configuration-------------------------------------------
 keymap('v', '<space>cc', ':Commentary<CR>', opts)
 keymap('n', '<space>cc', ':Commentary<CR>', opts)
