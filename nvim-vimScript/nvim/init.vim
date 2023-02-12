@@ -1,3 +1,5 @@
+filetype plugin on
+
 " Habilitar la sintaxis del vim
 syntax enable
 
@@ -56,6 +58,8 @@ Plug ('jiangmiao/auto-pairs')
 Plug ('tpope/vim-commentary')
 Plug ('mhinz/vim-signify')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug ('tpope/vim-fugitive')
+
 
 call plug#end()
 
@@ -136,6 +140,7 @@ nmap <c-Left>   :bp<CR>
 nmap <c-Right>  :bn<CR>
 nmap <c-b>      :bd %<CR>
 
-" PLUGIN COMMENTARY Keybindings
-vnoremap <SPACE>cc  :Commentary<CR>
-nnoremap <SPACE>cc  :Commentary<CR>
+"Configuration the extensions to commentary
+autocmd FileType xml,html setlocal commentstring=<!--%s-->
+autocmd FileType sh,python,text setlocal commentstring=#%s
+autocmd FileType javascript,typescript setlocal commentstring=//%s
